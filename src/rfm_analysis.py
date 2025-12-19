@@ -7,9 +7,9 @@ engine = create_engine(
     connect_args={"password": "<YOUR_PASSWORD>"}
 )
 
-# ----------------------------
-# 1. Customer segment count
-# ----------------------------
+
+# Customer segment count
+
 segment_query = """
 WITH rfm AS (
     SELECT
@@ -45,9 +45,9 @@ plt.xlabel("Segment")
 plt.ylabel("Number of Customers")
 plt.show()
 
-# ----------------------------
-# 2. Revenue by segment
-# ----------------------------
+
+# Revenue by segment
+
 revenue_query = """
 WITH customer_metrics AS (
     SELECT
@@ -87,9 +87,9 @@ plt.xlabel("Segment")
 plt.ylabel("Total Revenue")
 plt.show()
 
-# ----------------------------
-# 3. Recency vs Frequency
-# ----------------------------
+
+# Recency vs Frequency
+
 rf_query = """
 SELECT
     customer_id,
@@ -107,3 +107,4 @@ plt.xlabel("Recency (days)")
 plt.ylabel("Frequency")
 plt.show()
  
+
